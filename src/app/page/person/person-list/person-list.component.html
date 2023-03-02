@@ -25,8 +25,12 @@
       </div>
       <div class="col-4">
         <div>
-          <i [routerLink]="[item.id]">Edit</i>
-          <i (click)="delete(item.id || 0)">Delete</i>
+          <button [routerLink]="[item.id]" class="m-1">
+            Edit
+          </button>
+          <button (click)="delete(item.id || 0)" class="m-1">
+            Delete
+          </button>
         </div>
       </div>
     </div>
