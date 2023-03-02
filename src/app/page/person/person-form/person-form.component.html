@@ -1,0 +1,31 @@
+<div class="card">
+  <div class="center-items">
+    <h1> Person</h1>
+  </div>
+  <form (ngSubmit)="onSubmit()" [formGroup]="form" class="form__group field">
+    <div class="row">
+      <label for="name" class="form__label">Name</label>
+      <input id="name" placeholder="Name" class="input" type="text" formControlName="name">
+    </div>
+    <div class="row">
+      <label for="email" class="form__label">E-mail</label>
+      <input id="email" placeholder="E-mail" class="input" type="text" formControlName="email">
+    </div>
+    <div class="row">
+      <label for="cpf" class="form__label">CPF</label>
+      <input id="cpf" placeholder="CPF" class="input" type="text" formControlName="cpf">
+    </div>
+    <div class="row">
+      <label for="phone" class="form__label">Phone</label>
+      <input id="phone" placeholder="Telefone" class="input" type="text" formControlName="phone">
+    </div>
+    <div class="row">
+      <label for="year" class="form__label">Year</label>
+      <input id="year" placeholder="Year" class="input" type="number" formControlName="year">
+    </div>
+    <div class="center-items mt-7">
+      <button (click)="back()">Back</button>
+      <button [disabled]="form.invalid" type="submit">Save</button>
+    </div>
+  </form>
+</div>

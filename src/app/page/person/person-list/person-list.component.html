@@ -1,0 +1,34 @@
+<div>
+  <div class="row center-items">
+    <button routerLink="new">Add new Person</button>
+  </div>
+  <div *ngFor="let item of list$ | async" class="card">
+    <div class="row">
+      <div class="col-8">
+        <div class="row">
+          <div class="col-12">
+            <span>Name:</span> {{item?.name}}
+          </div>
+          <div class="col-12">
+            <span>CPF:</span> {{item?.cpf}}
+          </div>
+          <div class="col-12">
+            <span>E-mail:</span> {{item?.email}}
+          </div>
+          <div class="col-12">
+            <span>Phone:</span> {{item?.phone}}
+          </div>
+          <div class="col-12">
+            <span>Year:</span> {{item?.year}}
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div>
+          <i [routerLink]="[item.id]">Edit</i>
+          <i (click)="delete(item.id || 0)">Delete</i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
